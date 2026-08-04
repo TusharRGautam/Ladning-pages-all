@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahindra Sanctum - Real Estate Landing Page</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome / SVG Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION BAR -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-container">
+            
+            <!-- Logo Placeholder Area -->
+            <div class="logo-container">
+                <a href="#home" class="logo-link">
+                    <div class="logo-placeholder">
+                        <span class="placeholder-badge">[LOGO PLACEHOLDER]</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <i class="fa-solid fa-house nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#price" class="nav-link">
+                            <i class="fa-solid fa-indian-rupee-sign nav-icon"></i>
+                            <span>Price</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#plans" class="nav-link">
+                            <i class="fa-solid fa-border-all nav-icon"></i>
+                            <span>Plans</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#amenities" class="nav-link">
+                            <i class="fa-solid fa-water nav-icon"></i>
+                            <span>Amenities</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">
+                            <i class="fa-regular fa-image nav-icon"></i>
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#location" class="nav-link">
+                            <i class="fa-solid fa-location-dot nav-icon"></i>
+                            <span>Location</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#virtual-tour" class="nav-link">
+                            <i class="fa-solid fa-video nav-icon"></i>
+                            <span>Virtual Tour</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#brochure" class="nav-link">
+                            <i class="fa-solid fa-download nav-icon"></i>
+                            <span>Download Brochure</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Action Buttons (Price Sheet & Phone) -->
+            <div class="header-actions">
+                <div class="cta-combined-btn">
+                    <button class="cta-part cta-download" onclick="openModal('download')">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download<br><small>Price Sheet</small></span>
+                    </button>
+                    <span class="cta-divider"></span>
+                    <a href="tel:+91XXXXXXXXXX" class="cta-part cta-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 XXXXXXXXXX</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA WITH STICKY SIDEBAR -->
+    <main class="main-content">
+        <div class="page-layout-container">
+            
+            <!-- LEFT & CENTER MAIN CONTENT (SCROLLABLE) -->
+            <div class="main-scrolling-content">
+                
+                <!-- HERO SECTION -->
+                <section id="home" class="hero-section">
+                    <!-- LEFT COLUMN: Project Details Card -->
+                    <div class="hero-left-card">
+                        <!-- Top Announcement Ribbon -->
+                        <div class="ribbon-strip">
+                            Bookings Open – Choice Units & Launch Pricing Filling Fast
+                        </div>
+                        
+                        <div class="left-card-body">
+                            <h1 class="project-title">Project Name</h1>
+                            <p class="project-subtitle">Premium 2 & 3 BHK Homes By Developer Name</p>
+
+                            <!-- Specifications Grid -->
+                            <div class="spec-grid">
+                                <div class="spec-row">
+                                    <span class="spec-label">Configuration</span>
+                                    <span class="spec-value">2 & 3 BHK</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Booking Token</span>
+                                    <span class="spec-value">₹ XX,XX,XXX/-</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Booking Status</span>
+                                    <span class="spec-value highlight-status">Bookings Open</span>
+                                </div>
+                            </div>
+
+                            <!-- Payment & Offers Dashed Box -->
+                            <div class="offers-dashed-box">
+                                <p>CLP & 20:80 Payment Plans Available</p>
+                                <p>Exclusive Offers Available</p>
+                                <p>Cheque Favouring: Developer Name Ltd.</p>
+                            </div>
+
+                            <!-- Price Starts At Section -->
+                            <div class="price-container">
+                                <span class="price-sublabel">Premium 2 BHK Starts At</span>
+                                <div class="price-row">
+                                    <span class="price-amount">₹ XX.XX Cr*</span>
+                                    <span class="price-onwards">Onwards</span>
+                                </div>
+                            </div>
+
+                            <!-- Download Brochure Button -->
+                            <div class="left-btn-container">
+                                <button class="btn-download-brochure" onclick="openModal('brochure')">
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>DOWNLOAD BROCHURE</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CENTER COLUMN: Banner Image Placeholder Container -->
+                    <div class="hero-center-banner">
+                        <div class="banner-wrapper">
+                            <!-- Top RERA Overlay info -->
+                            <div class="rera-overlay">
+                                <span>MahaRERA: XXXXXXXXXXXX</span>
+                                <a href="http://maharera.maharashtra.gov.in" target="_blank" rel="noopener">http://maharera.maharashtra.gov.in</a>
+                                <i class="fa-solid fa-qrcode rera-qr"></i>
+                            </div>
+
+                            <!-- Banner Image Space / Placeholder -->
+                            <div class="banner-image-space">
+                                <div class="banner-placeholder-info">
+                                    <i class="fa-solid fa-image placeholder-banner-icon"></i>
+                                    <span class="placeholder-tag">[BANNER IMAGE SPACE]</span>
+                                    <p class="placeholder-subtext">Main Hero Image Goes Here</p>
+                                </div>
+
+                                <!-- Overlay Banner Text from Image -->
+                                <div class="banner-tagline-overlay">
+                                    <span class="accent-line"></span>
+                                    <h2>Sample Banner Tagline Here</h2>
+                                </div>
+
+                                <!-- Bottom Pill Badge -->
+                                <div class="banner-location-badge">
+                                    Premium 2 & 3 BHK Residences
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WELCOME / ABOUT OVERVIEW SECTION -->
+                <section class="about-overview-section">
+                    <h2 class="welcome-title">Welcome To Project Name</h2>
+                    <p class="welcome-text">
+                        Sample description text about Project Name. Add project overview details here including configuration, layout sizes, lifestyle benefits, and trusted developer legacy. Replace this with actual text content when deploying the final landing page.
+                    </p>
+                    <a href="javascript:void(0)" class="read-more-link" onclick="toggleReadMore(this)">Read more</a>
+                    
+                    <div class="welcome-action-container">
+                        <button class="btn-welcome-brochure" onclick="openModal('brochure')">
+                            <i class="fa-solid fa-square-arrow-down download-icon"></i>
+                            <span>DOWNLOAD BROCHURE</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- PRICING & CARPET AREA SECTION -->
+                <section id="price" class="pricing-carpet-section">
+                    <div class="pricing-header">
+                        <h2 class="pricing-title">Project Name – Pricing and Carpet Area</h2>
+                        <div class="pricing-divider"></div>
+                        <p class="pricing-subtitle">
+                            Attractive launch pricing with CLP & 20:80 Payment Plans | EOI: ₹ XX,XX,XXX/-
+                        </p>
+                    </div>
+
+                    <div class="pricing-content-grid">
+                        
+                        <!-- Left Table Block -->
+                        <div class="pricing-table-container">
+                            <table class="pricing-table">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Carpet Area</th>
+                                        <th>CLP Price</th>
+                                        <th>20:80 Price</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="unit-type">2 BHK Premium</td>
+                                        <td class="carpet-area">XXX – XXX Sq.Ft.</td>
+                                        <td class="clp-price">₹ XX.XX Cr* Onwards</td>
+                                        <td class="plan-price">₹ XX.XX – XX.XX Cr*</td>
+                                        <td class="action-cell">
+                                            <button class="btn-price-breakup" onclick="openModal('price-breakup-2bhk-p')">Price Breakup</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="unit-type">2 BHK Luxury</td>
+                                        <td class="carpet-area">XXX – XXX Sq.Ft.</td>
+                                        <td class="clp-price">₹ XX.XX Cr* Onwards</td>
+                                        <td class="plan-price">₹ XX.XX – XX.XX Cr*</td>
+                                        <td class="action-cell">
+                                            <button class="btn-price-breakup" onclick="openModal('price-breakup-2bhk-l')">Price Breakup</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="unit-type">3 BHK</td>
+                                        <td class="carpet-area">XXXX – XXXX Sq.Ft.</td>
+                                        <td class="clp-price">₹ XX.XX Cr* Onwards</td>
+                                        <td class="plan-price">₹ XX.XX – XX.XX Cr*</td>
+                                        <td class="action-cell">
+                                            <button class="btn-price-breakup" onclick="openModal('price-breakup-3bhk')">Price Breakup</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <!-- Bottom Note Bar inside Table Card -->
+                            <div class="pricing-nri-note">
+                                <i class="fa-regular fa-star star-icon"></i>
+                                <span><strong>20:80 Price</strong> — Exclusive for NRI & Outstation Customers</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Costing Card Block -->
+                        <div class="costing-card-container">
+                            <div class="costing-sheet-preview">
+                                <div class="blurred-table-mock">
+                                    <div class="blur-row blur-head"></div>
+                                    <div class="blur-row"></div>
+                                    <div class="blur-row"></div>
+                                    <div class="blur-row"></div>
+                                    <div class="blur-row"></div>
+                                </div>
+                            </div>
+                            <button class="btn-download-costing" onclick="openModal('costing-details')">
+                                <i class="fa-solid fa-download"></i>
+                                <span>Download Costing Details</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Launch Offer Box -->
+                    <div class="launch-offer-box">
+                        <div class="offer-left">
+                            <span class="offer-pill-badge">LIMITED PERIOD LAUNCH OFFER</span>
+                            <div class="offer-details">
+                                <p class="offer-line1"><strong>EOI Amount: ₹ XX,XX,XXX/-</strong> | <strong>Cheque Favouring:</strong> Developer Name Ltd.</p>
+                                <p class="offer-line2"><strong>EOI Starts from XX Month 202X Onwards</strong></p>
+                            </div>
+                        </div>
+                        <div class="offer-right">
+                            <button class="btn-book-eoi" onclick="openModal('eoi-book')">Book EOI Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer text -->
+                    <p class="pricing-disclaimer">
+                        * Prices are indicative and subject to change without notice. GST, Stamp Duty, Registration & other statutory charges extra.
+                    </p>
+                </section>
+
+                <!-- MASTER PLAN SECTION -->
+                <section id="plans" class="master-plan-section">
+                    <div class="plans-header">
+                        <h2 class="plans-title">Project Name – Master Plan</h2>
+                        <div class="plans-divider"></div>
+                        <p class="plans-subtitle">
+                            Sample subtitle describing township layout, open green spaces, and key features
+                        </p>
+                    </div>
+
+                    <div class="master-plan-card">
+                        <span class="card-inner-label">Master plan</span>
+
+                        <!-- Master Plan Image Container -->
+                        <div class="master-plan-image-container">
+                            <div class="plan-image-placeholder">
+                                <i class="fa-solid fa-map-location-dot plan-placeholder-icon"></i>
+                                <span class="plan-placeholder-tag">[MASTER PLAN IMAGE SPACE]</span>
+                                <p class="plan-placeholder-text">Township Layout Diagram & Amenities Legend</p>
+                            </div>
+                        </div>
+
+                        <!-- Overlay Download Button -->
+                        <button class="btn-download-masterplan" onclick="openModal('masterplan')">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download Master Plan</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- FLOOR PLANS SECTION -->
+                <section class="floor-plans-section">
+                    <div class="floor-plans-header">
+                        <h2 class="floor-plans-title">Project Name – Floor Plans</h2>
+                        <div class="floor-plans-divider"></div>
+                        <p class="floor-plans-subtitle">
+                            Sample subtitle describing carpet area layout options
+                        </p>
+                    </div>
+
+                    <div class="floor-plans-grid">
+                        
+                        <!-- Card 1: 2 BHK Premium -->
+                        <div class="floor-plan-card">
+                            <div class="plan-card-header header-maroon">
+                                <h3>2 BHK Premium</h3>
+                            </div>
+                            <div class="plan-card-body" onclick="openModal('floorplan-2bhk-premium')">
+                                <div class="floor-plan-image-space">
+                                    <i class="fa-solid fa-compass-drafting plan-icon"></i>
+                                    <span class="plan-tag">[2 BHK PREMIUM FLOOR PLAN]</span>
+                                    <p class="plan-sub">Click to view enlarged layout</p>
+                                </div>
+                            </div>
+                            <div class="plan-card-footer">
+                                <div class="carpet-info">
+                                    <i class="fa-solid fa-up-right-and-down-left-from-center size-icon"></i>
+                                    <span>XXX – XXX Sq.Ft. Carpet</span>
+                                </div>
+                                <div class="price-pill-box">
+                                    <span>₹ XX.XX Cr* (CLP)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: 2 BHK Luxury -->
+                        <div class="floor-plan-card">
+                            <div class="plan-card-header header-gold">
+                                <h3>2 BHK Luxury</h3>
+                            </div>
+                            <div class="plan-card-body" onclick="openModal('floorplan-2bhk-luxury')">
+                                <div class="floor-plan-image-space">
+                                    <i class="fa-solid fa-compass-drafting plan-icon"></i>
+                                    <span class="plan-tag">[2 BHK LUXURY FLOOR PLAN]</span>
+                                    <p class="plan-sub">Click to view enlarged layout</p>
+                                </div>
+                            </div>
+                            <div class="plan-card-footer">
+                                <div class="carpet-info">
+                                    <i class="fa-solid fa-up-right-and-down-left-from-center size-icon"></i>
+                                    <span>XXX – XXX Sq.Ft. Carpet</span>
+                                </div>
+                                <div class="price-pill-box">
+                                    <span>₹ XX.XX Cr* (CLP)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: 3 BHK -->
+                        <div class="floor-plan-card">
+                            <div class="plan-card-header header-dark-maroon">
+                                <h3>3 BHK</h3>
+                            </div>
+                            <div class="plan-card-body" onclick="openModal('floorplan-3bhk')">
+                                <div class="floor-plan-image-space">
+                                    <i class="fa-solid fa-compass-drafting plan-icon"></i>
+                                    <span class="plan-tag">[3 BHK FLOOR PLAN]</span>
+                                    <p class="plan-sub">Click to view enlarged layout</p>
+                                </div>
+                            </div>
+                            <div class="plan-card-footer">
+                                <div class="carpet-info">
+                                    <i class="fa-solid fa-up-right-and-down-left-from-center size-icon"></i>
+                                    <span>XXXX – XXXX Sq.Ft. Carpet</span>
+                                </div>
+                                <div class="price-pill-box">
+                                    <span>₹ XX.XX Cr* (CLP)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- AMENITIES SECTION -->
+                <section id="amenities" class="amenities-section">
+                    <div class="amenities-header-row">
+                        <h2 class="amenities-title">Amenities Of Project Name</h2>
+                        <button class="btn-download-amenities" onclick="openModal('amenities-brochure')">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download Amenities</span>
+                        </button>
+                    </div>
+
+                    <div class="amenities-carousel-wrapper">
+                        <!-- Carousel Prev Arrow -->
+                        <button class="carousel-arrow arrow-left" onclick="slideAmenities('left')" aria-label="Previous amenity">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <!-- Amenities 3x2 Grid Container -->
+                        <div class="amenities-grid">
+                            
+                            <!-- Card 1: Indoor Games Room -->
+                            <div class="amenity-card">
+                                <div class="amenity-placeholder-space">
+                                    <i class="fa-regular fa-image amenity-placeholder-icon"></i>
+                                    <span class="amenity-placeholder-tag">[INDOOR GAMES ROOM IMAGE SPACE]</span>
+                                </div>
+                                <div class="amenity-badge">
+                                    <span class="badge-accent"></span>
+                                    <span class="badge-text">INDOOR GAMES ROOM</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Swimming Pool -->
+                            <div class="amenity-card">
+                                <div class="amenity-placeholder-space">
+                                    <i class="fa-regular fa-image amenity-placeholder-icon"></i>
+                                    <span class="amenity-placeholder-tag">[SWIMMING POOL IMAGE SPACE]</span>
+                                </div>
+                                <div class="amenity-badge">
+                                    <span class="badge-accent"></span>
+                                    <span class="badge-text">SWIMMING POOL</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Badminton Court -->
+                            <div class="amenity-card">
+                                <div class="amenity-placeholder-space">
+                                    <i class="fa-regular fa-image amenity-placeholder-icon"></i>
+                                    <span class="amenity-placeholder-tag">[BADMINTON COURT IMAGE SPACE]</span>
+                                </div>
+                                <div class="amenity-badge">
+                                    <span class="badge-accent"></span>
+                                    <span class="badge-text">BADMINTON COURT</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Kid's Play Area -->
+                            <div class="amenity-card">
+                                <div class="amenity-placeholder-space">
+                                    <i class="fa-regular fa-image amenity-placeholder-icon"></i>
+                                    <span class="amenity-placeholder-tag">[KID'S PLAY AREA IMAGE SPACE]</span>
+                                </div>
+                                <div class="amenity-badge">
+                                    <span class="badge-accent"></span>
+                                    <span class="badge-text">KID'S PLAY AREA</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 5: Gymnasium -->
+                            <div class="amenity-card">
+                                <div class="amenity-placeholder-space">
+                                    <i class="fa-regular fa-image amenity-placeholder-icon"></i>
+                                    <span class="amenity-placeholder-tag">[GYMNASIUM IMAGE SPACE]</span>
+                                </div>
+                                <div class="amenity-badge">
+                                    <span class="badge-accent"></span>
+                                    <span class="badge-text">GYMNASIUM</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 6: Banquet Hall -->
+                            <div class="amenity-card">
+                                <div class="amenity-placeholder-space">
+                                    <i class="fa-regular fa-image amenity-placeholder-icon"></i>
+                                    <span class="amenity-placeholder-tag">[BANQUET HALL IMAGE SPACE]</span>
+                                </div>
+                                <div class="amenity-badge">
+                                    <span class="badge-accent"></span>
+                                    <span class="badge-text">BANQUET HALL</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Carousel Next Arrow -->
+                        <button class="carousel-arrow arrow-right" onclick="slideAmenities('right')" aria-label="Next amenity">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- GALLERY SECTION -->
+                <section id="gallery" class="gallery-section">
+                    <div class="gallery-header-row">
+                        <h2 class="gallery-title">Gallery Of Project Name</h2>
+                        <button class="btn-download-gallery" onclick="openModal('gallery-download')">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download Gallery</span>
+                        </button>
+                    </div>
+
+                    <!-- Gallery 4-Column Grid -->
+                    <div class="gallery-grid">
+                        
+                        <!-- Card 1 -->
+                        <div class="gallery-card" onclick="openModal('gallery-item-1')">
+                            <div class="gallery-placeholder-space">
+                                <i class="fa-regular fa-images gallery-placeholder-icon"></i>
+                                <span class="gallery-placeholder-tag">[GALLERY IMAGE 1 - LIVING ROOM SPACE]</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="gallery-card" onclick="openModal('gallery-item-2')">
+                            <div class="gallery-placeholder-space">
+                                <i class="fa-regular fa-images gallery-placeholder-icon"></i>
+                                <span class="gallery-placeholder-tag">[GALLERY IMAGE 2 - INTERIOR DESIGN SPACE]</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="gallery-card" onclick="openModal('gallery-item-3')">
+                            <div class="gallery-placeholder-space">
+                                <i class="fa-regular fa-images gallery-placeholder-icon"></i>
+                                <span class="gallery-placeholder-tag">[GALLERY IMAGE 3 - DINING & LOUNGE SPACE]</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="gallery-card" onclick="openModal('gallery-item-4')">
+                            <div class="gallery-placeholder-space">
+                                <i class="fa-regular fa-images gallery-placeholder-icon"></i>
+                                <span class="gallery-placeholder-tag">[GALLERY IMAGE 4 - BALCONY VIEW SPACE]</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- LOCATION & CONNECTIVITY SECTION -->
+                <section id="location" class="location-section">
+                    <div class="location-header-row">
+                        <h2 class="location-title">Project Name Location Map And Connectivity</h2>
+                        <button class="btn-get-directions" onclick="openModal('get-directions')">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span>Get Directions</span>
+                        </button>
+                    </div>
+
+                    <div class="location-content-grid">
+                        
+                        <!-- Left Map Image Placeholder Space -->
+                        <div class="location-map-card" onclick="openModal('map-expanded')">
+                            <div class="location-placeholder-space">
+                                <i class="fa-solid fa-map-location-dot map-placeholder-icon"></i>
+                                <span class="map-placeholder-tag">[LOCATION MAP IMAGE SPACE]</span>
+                                <p class="map-placeholder-text">Click to open interactive map & directions</p>
+                            </div>
+                        </div>
+
+                        <!-- Right Connectivity Points List -->
+                        <div class="connectivity-list-container">
+                            <ul class="connectivity-list">
+                                <li class="connectivity-item">
+                                    <div class="item-left">
+                                        <i class="fa-solid fa-location-dot item-icon"></i>
+                                        <span class="item-name">Sample Location Landmark 1</span>
+                                    </div>
+                                    <span class="item-time">X mins</span>
+                                </li>
+                                <li class="connectivity-item">
+                                    <div class="item-left">
+                                        <i class="fa-solid fa-location-dot item-icon"></i>
+                                        <span class="item-name">Sample Highway / Expressway</span>
+                                    </div>
+                                    <span class="item-time">X mins</span>
+                                </li>
+                                <li class="connectivity-item">
+                                    <div class="item-left">
+                                        <i class="fa-solid fa-location-dot item-icon"></i>
+                                        <span class="item-name">Sample Metro / Railway Station</span>
+                                    </div>
+                                    <span class="item-time">XX mins</span>
+                                </li>
+                                <li class="connectivity-item">
+                                    <div class="item-left">
+                                        <i class="fa-solid fa-location-dot item-icon"></i>
+                                        <span class="item-name">Sample Business Park / IT Hub</span>
+                                    </div>
+                                    <span class="item-time">XX mins</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- VIRTUAL TOUR SECTION -->
+                <section id="virtual-tour" class="virtual-tour-section">
+                    <h2 class="virtual-tour-title">Virtual Tour Request</h2>
+
+                    <!-- Video Banner Placeholder Card -->
+                    <div class="virtual-tour-card" onclick="openModal('virtual-tour')">
+                        <div class="virtual-tour-placeholder-space">
+                            <!-- Overlay Play Button & Text -->
+                            <div class="tour-play-container">
+                                <div class="play-btn-circle">
+                                    <i class="fa-solid fa-play play-icon"></i>
+                                </div>
+                                <h3 class="tour-site-heading">VIRTUAL SITE VISIT</h3>
+                                <p class="tour-sub-brand">Project Name</p>
+                            </div>
+                            <span class="tour-placeholder-tag">[VIRTUAL TOUR VIDEO / BANNER IMAGE SPACE]</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ABOUT DEVELOPER & RERA SECTION -->
+                <section id="about" class="about-section">
+                    <!-- Top Logo Header Placeholder Space -->
+                    <div class="developer-logo-wrapper">
+                        <div class="developer-logo-placeholder">
+                            <i class="fa-solid fa-building-user dev-logo-icon"></i>
+                            <span class="dev-logo-text">[DEVELOPER LOGO PLACEHOLDER]</span>
+                        </div>
+                    </div>
+
+                    <!-- Title & Chat Button Row -->
+                    <div class="about-header-row">
+                        <h2 class="about-title">About Developer</h2>
+                        <button class="btn-chat-us" onclick="openModal('chat-us')">
+                            <i class="fa-solid fa-comments"></i>
+                            <span>Chat with us</span>
+                        </button>
+                    </div>
+
+                    <!-- Developer Description Paragraph -->
+                    <p class="about-description">
+                        Sample text about the developer background, achievements, and real estate portfolio. The developer has a rich legacy of delivering premium residential townships, commercial landmarks, and mixed-use developments with a focus on architecture quality and customer satisfaction.
+                    </p>
+
+                    <!-- RERA Information Sub-Section -->
+                    <div class="rera-container">
+                        <h3 class="rera-title">RERA Information</h3>
+
+                        <div class="rera-content-row">
+                            <!-- Left QR Code Placeholder Space -->
+                            <div class="rera-qr-box">
+                                <i class="fa-solid fa-qrcode rera-qr-icon"></i>
+                                <span class="rera-qr-tag">[RERA QR CODE SPACE]</span>
+                            </div>
+
+                            <!-- Right RERA Details Text -->
+                            <div class="rera-details">
+                                <p class="rera-project-name">Project Name MahaRERA -</p>
+                                <p class="rera-number">XXXXXXXXXXXX</p>
+                                <p class="rera-disclaimer">
+                                    According to the RERA Act 2016 of the Government of India, all projects of the developer including Project Name, are listed on the Maharashtra Government's RERA website under registered projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SITE FOOTER & RERA DISCLAIMER SECTION -->
+                <footer id="footer" class="site-footer-section">
+                    <div class="footer-container">
+                        <!-- RERA List & Contact Bullet Points -->
+                        <ul class="footer-info-list">
+                            <li class="footer-info-item">
+                                <i class="fa-solid fa-check check-icon"></i>
+                                <span>Project Registered under Government of India RERA Act 2016</span>
+                            </li>
+                            <li class="footer-info-item">
+                                <i class="fa-solid fa-check check-icon"></i>
+                                <span>Government RERA Authorised Advertiser's: Agency Name Pvt Ltd, Registration No XXXXXXXXXXX, CIN XXXXXXXXXXXXXXXXXXXXXXX.</span>
+                            </li>
+                            <li class="footer-info-item">
+                                <i class="fa-solid fa-check check-icon"></i>
+                                <span><strong>MAHA RERA Project Registration No.:</strong> XXXXXXXXXXXX</span>
+                            </li>
+                            <li class="footer-info-item">
+                                <i class="fa-solid fa-check check-icon"></i>
+                                <span><strong>Site Address:</strong> Project Name: Location Address, City, State XXXXXX</span>
+                            </li>
+                            <li class="footer-info-item">
+                                <i class="fa-solid fa-check check-icon"></i>
+                                <span><strong>Contact Us:</strong> Corporate Office: Developer Name: Office Address, City - XXXXXX</span>
+                            </li>
+                        </ul>
+
+                        <!-- Disclaimer Text Box -->
+                        <div class="footer-disclaimer-box">
+                            <p>
+                                <strong>Disclaimer:</strong> We are an authorised marketing partner for this project. Provided content is given by respective owners and this website and content is for Information purpose only and it does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.
+                            </p>
+                        </div>
+
+                        <!-- Horizontal Divider & Copyright Bar -->
+                        <div class="footer-bottom-bar">
+                            <p class="copyright-text">
+                                Copyright © 2026 | <a href="terms-and-conditions.html" target="_blank">Terms & Conditions</a> | <a href="privacy-policy.html" target="_blank">Privacy Policy</a> | <a href="cookies-policy.html" target="_blank">Cookies Policy</a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+
+            <!-- RIGHT STICKY SIDEBAR (FIXED/STICKY TILL FOOTER) -->
+            <aside class="sticky-sidebar-col">
+                <div class="hero-right-form">
+                    <!-- Top Callback Tag -->
+                    <div class="callback-tag" onclick="openModal('callback')">
+                        <i class="fa-solid fa-phone-volume callback-phone-icon"></i>
+                        <span>INSTANT CALLBACK</span>
+                    </div>
+
+                    <!-- Form Header -->
+                    <h3 class="form-title">Get The Best Quote</h3>
+                    <div class="title-underline"></div>
+
+                    <!-- Form Inputs -->
+                    <form class="lead-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email Address(Optional)">
+                        </div>
+
+                        <div class="form-group phone-group">
+                            <div class="country-code-select">
+                                <span>India (+91)</span>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                            <input type="tel" class="form-input phone-input" placeholder="Phone number" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit-lead">
+                            GET IT NOW
+                        </button>
+                    </form>
+
+                    <!-- Inline Success Message -->
+                    <div id="sidebarSuccessMsg" class="form-success-box" style="display: none;">
+                        <div class="success-icon-wrapper">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h4 class="success-title">Registered Successfully!</h4>
+                        <p class="success-text">Thank you for your interest. Our expert sales team will get back to you shortly.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Mobile Sticky Bottom Action Bar (Visible only on mobile devices) -->
+    <div class="mobile-sticky-bar">
+        <a href="tel:+91XXXXXXXXXX" class="mobile-bar-btn mobile-btn-call">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+        <button class="mobile-bar-btn mobile-btn-enquire" onclick="openModal('mobile-bar')">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Enquire Now</span>
+        </button>
+    </div>
+
+    <!-- Floating Bottom-Right: Download Brochure + Priya Sharma Chatbot -->
+    <div class="float-corner-group">
+
+        <!-- Floating Download Brochure Button -->
+        <button class="float-brochure-btn" id="floatBrochureBtn" onclick="openModal('brochure-float')" aria-label="Download Brochure">
+            <span class="float-btn-text">Download<br>Brochure</span>
+            <span class="float-pdf-icon-wrap">
+                <i class="fa-solid fa-file-pdf float-pdf-icon"></i>
+            </span>
+        </button>
+
+        <!-- Priya Sharma Chatbot Widget -->
+        <div class="chatbot-widget" id="chatbotWidget">
+
+            <!-- Small Teaser Popup Bubble (shown before chat opens) -->
+            <div class="chatbot-popup" id="chatbotPopup">
+                <button class="chatbot-popup-close" id="chatbotPopupClose" aria-label="Close">&#x2715;</button>
+                <p class="chatbot-popup-greeting" id="chatbotGreeting">"Hey, I'm Priya Sharma!"</p>
+                <p class="chatbot-popup-question">How can I help you?</p>
+                <button class="chatbot-popup-cta" id="chatbotOpenBtn">Let's Chat</button>
+            </div>
+
+            <!-- Full Chatbot Window -->
+            <div class="chatbot-window" id="chatbotWindow">
+                <!-- Header -->
+                <div class="cw-header">
+                    <div class="cw-header-avatar">
+                        <div class="cw-avatar-img">
+                            <!-- IMAGE: replace inner div with <img src="priya.jpg"> when ready -->
+                            <div class="cw-avatar-placeholder"><i class="fa-solid fa-user-tie"></i></div>
+                        </div>
+                        <span class="cw-online-dot"></span>
+                    </div>
+                    <div class="cw-header-info">
+                        <span class="cw-header-name">Priya Sharma</span>
+                        <span class="cw-header-status"><span class="cw-status-dot"></span>Online — Typically replies instantly</span>
+                    </div>
+                    <button class="cw-close-btn" id="cwCloseBtn" aria-label="Close chat">&#x2715;</button>
+                </div>
+
+                <!-- Messages Area -->
+                <div class="cw-messages" id="cwMessages">
+                    <!-- JS will render messages here -->
+                </div>
+
+                <!-- Quick Reply Chips (JS renders) -->
+                <div class="cw-quick-replies" id="cwQuickReplies"></div>
+
+                <!-- Contact Form (shown at last step) -->
+                <div class="cw-contact-form" id="cwContactForm" style="display:none;">
+                    <input type="text" id="cwName" class="cw-input" placeholder="Your full name *" autocomplete="name">
+                    <input type="tel" id="cwPhone" class="cw-input" placeholder="Mobile number *" autocomplete="tel" maxlength="12">
+                    <button class="cw-submit-btn" id="cwSubmitBtn">
+                        <i class="fa-solid fa-paper-plane"></i> Send &amp; Get Callback
+                    </button>
+                </div>
+
+                <!-- Thank You Screen -->
+                <div class="cw-thankyou" id="cwThankyou" style="display:none;">
+                    <div class="cw-thankyou-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <p class="cw-thankyou-title">Thank You! 🎉</p>
+                    <p class="cw-thankyou-msg">Priya will get back to you shortly.<br>Our team will contact you within <strong>30 minutes</strong>.</p>
+                </div>
+
+                <!-- Write a Reply Input Box -->
+                <div class="cw-input-area" id="cwInputArea">
+                    <input type="text" id="cwUserText" class="cw-text-input" placeholder="Write a reply..">
+                    <button class="cw-send-btn" id="cwSendBtn" aria-label="Send">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Priya Avatar (trigger) -->
+            <div class="chatbot-avatar" id="chatbotAvatar">
+                <div class="chatbot-avatar-placeholder">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <span class="chatbot-online-dot"></span>
+            </div>
+            <div class="chatbot-name-tag">Priya Sharma</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
