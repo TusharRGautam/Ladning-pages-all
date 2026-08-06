@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads Dashboard — Mahindra Sanctum</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2b6cb0;
+            --accent: #d4a853;
+            --text-primary: #1a202c;
+            --bg-light: #f7fafc;
+            --border-light: #e2e8f0;
+            --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-light);
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            padding: 30px;
+        }
+
+        /* Login State */
+        .login-card {
+            max-width: 400px;
+            margin: 100px auto;
+            text-align: center;
+            padding: 40px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--primary);
+        }
+
+        .login-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .login-card p {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .login-input {
+            width: 100%;
+            height: 48px;
+            border: 1.5px solid var(--border-light);
+            border-radius: 8px;
+            padding: 0 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            outline: none;
+            letter-spacing: 2px;
+        }
+
+        .login-input:focus {
+            border-color: var(--primary-light);
+        }
+
+        .btn-login {
+            width: 100%;
+            height: 48px;
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-login:hover {
+            background: var(--primary-light);
+        }
+
+        .error-message {
+            color: #e53e3e;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            display: none;
+        }
+
+        /* Dashboard State */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-export {
+            background: #22c55e;
+            color: #ffffff;
+        }
+
+        .btn-export:hover {
+            background: #15803d;
+        }
+
+        .btn-clear {
+            background: #ef4444;
+            color: #ffffff;
+        }
+
+        .btn-clear:hover {
+            background: #b91c1c;
+        }
+
+        .btn-logout {
+            background: #718096;
+            color: #ffffff;
+        }
+
+        .btn-logout:hover {
+            background: #4a5568;
+        }
+
+        /* Table Styles */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .leads-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .leads-table th {
+            padding: 12px 16px;
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .leads-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .leads-table tbody tr:hover {
+            background: rgba(43, 108, 176, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .badge-form {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .badge-chat {
+            background: #feebc8;
+            color: #c05621;
+        }
+
+        .no-leads {
+            text-align: center;
+            padding: 60px 0;
+            color: #a0aec0;
+        }
+
+        .no-leads i {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Area -->
+    <div class="login-card" id="loginCard">
+        <h2>Leads Secure Access</h2>
+        <p>Please enter the dashboard access PIN</p>
+        <div class="input-group">
+            <input type="password" class="login-input" id="pinInput" placeholder="••••••" maxlength="20">
+            <div class="error-message" id="errorMessage">Incorrect PIN code!</div>
+        </div>
+        <button class="btn-login" id="btnLogin">Access Dashboard</button>
+    </div>
+
+    <!-- Dashboard Content (hidden by default) -->
+    <div class="container" id="dashboardContainer" style="display: none;">
+        <div class="dashboard-header">
+            <div>
+                <h1>Mahindra Sanctum Leads</h1>
+                <p style="font-size: 0.8rem; color: #718096; margin-top: 4px;">Download and manage captured real estate leads</p>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-export" id="btnExport">
+                    <i data-lucide="download"></i> Export CSV
+                </button>
+                <button class="btn btn-clear" id="btnClear">
+                    <i data-lucide="trash-2"></i> Clear Leads
+                </button>
+                <button class="btn btn-logout" id="btnLogout">
+                    <i data-lucide="log-out"></i> Logout
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="leads-table" id="leadsTable">
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Name</th>
+                        <th>Mobile Number</th>
+                        <th>Email ID</th>
+                        <th>Lead Source</th>
+                    </tr>
+                </thead>
+                <tbody id="leadsBody">
+                    <!-- Leads rows injected here -->
+                </tbody>
+            </table>
+            <div class="no-leads" id="noLeadsMessage" style="display: none;">
+                <i data-lucide="database"></i>
+                <p>No leads captured yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginCard = document.getElementById('loginCard');
+            const dashboardContainer = document.getElementById('dashboardContainer');
+            const pinInput = document.getElementById('pinInput');
+            const btnLogin = document.getElementById('btnLogin');
+            const errorMessage = document.getElementById('errorMessage');
+            const leadsBody = document.getElementById('leadsBody');
+            const noLeadsMessage = document.getElementById('noLeadsMessage');
+            const btnExport = document.getElementById('btnExport');
+            const btnClear = document.getElementById('btnClear');
+            const btnLogout = document.getElementById('btnLogout');
+
+            // Default PIN password
+            const ACCESS_PIN = 'admin123';
+
+            // Auto focus on PIN input
+            pinInput.focus();
+
+            // Press enter to login
+            pinInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') handleLogin();
+            });
+
+            btnLogin.addEventListener('click', handleLogin);
+
+            function handleLogin() {
+                if (pinInput.value === ACCESS_PIN) {
+                    sessionStorage.setItem('leads_auth', 'true');
+                    showDashboard();
+                } else {
+                    errorMessage.style.display = 'block';
+                    pinInput.value = '';
+                    pinInput.focus();
+                }
+            }
+
+            // Check if already authenticated in this session
+            if (sessionStorage.getItem('leads_auth') === 'true') {
+                showDashboard();
+            }
+
+            function showDashboard() {
+                loginCard.style.display = 'none';
+                dashboardContainer.style.display = 'block';
+                loadLeads();
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }
+
+            function loadLeads() {
+                const leads = JSON.parse(localStorage.getItem('captured_leads') || '[]');
+                
+                // Clear table
+                leadsBody.innerHTML = '';
+
+                if (leads.length === 0) {
+                    noLeadsMessage.style.display = 'block';
+                    return;
+                }
+
+                noLeadsMessage.style.display = 'none';
+
+                // Sort leads (newest first)
+                leads.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+                leads.forEach(lead => {
+                    const tr = document.createElement('tr');
+                    
+                    const date = new Date(lead.timestamp).toLocaleString('en-IN');
+                    const badgeClass = lead.source.toLowerCase().includes('chatbot') ? 'badge-chat' : 'badge-form';
+                    
+                    tr.innerHTML = `
+                        <td>${date}</td>
+                        <td><strong>${escapeHTML(lead.name)}</strong></td>
+                        <td><a href="tel:${lead.phone}" style="color: var(--primary-light); font-weight:500;">${escapeHTML(lead.phone)}</a></td>
+                        <td>${escapeHTML(lead.email)}</td>
+                        <td><span class="badge ${badgeClass}">${escapeHTML(lead.source)}</span></td>
+                    `;
+                    leadsBody.appendChild(tr);
+                });
+            }
+
+            function escapeHTML(str) {
+                if (!str) return 'N/A';
+                return str.replace(/[&<>'"]/g, 
+                    tag => ({
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        "'": '&#39;',
+                        '"': '&quot;'
+                    }[tag] || tag)
+                );
+            }
+
+            // Export Leads to CSV
+            btnExport.addEventListener('click', () => {
+                const leads = JSON.parse(localStorage.getItem('captured_leads') || '[]');
+                if (leads.length === 0) {
+                    alert('No leads to export!');
+                    return;
+                }
+
+                // Sort leads newest first
+                leads.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+                // CSV headers
+                let csvContent = "data:text/csv;charset=utf-8,Date & Time,Name,Mobile Number,Email ID,Lead Source\n";
+
+                // Add data
+                leads.forEach(lead => {
+                    const date = new Date(lead.timestamp).toLocaleString('en-IN').replace(/,/g, '');
+                    const name = lead.name.replace(/,/g, '');
+                    const phone = lead.phone;
+                    const email = lead.email;
+                    const source = lead.source.replace(/,/g, '');
+                    
+                    csvContent += `"${date}","${name}","${phone}","${email}","${source}"\n`;
+                });
+
+                // Download Link
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", `mahindra_sanctum_leads_${new Date().toISOString().slice(0,10)}.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+
+            // Clear Leads List
+            btnClear.addEventListener('click', () => {
+                if (confirm('Are you sure you want to permanently delete all captured leads? This action cannot be undone.')) {
+                    localStorage.removeItem('captured_leads');
+                    loadLeads();
+                }
+            });
+
+            // Logout
+            btnLogout.addEventListener('click', () => {
+                sessionStorage.removeItem('leads_auth');
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>

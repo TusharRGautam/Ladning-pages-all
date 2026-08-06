@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mahindra Sanctum — Premium 2 & 3 BHK Residences by Mahindra Lifespaces. Starting ₹1.07 Cr. CLP & 20:80 Payment Plans. EOI ₹1 Lakh. Download brochure & book free site visit.">
+    <meta name="keywords" content="Mahindra Sanctum, Mahindra Lifespaces, 2 BHK, 3 BHK, luxury apartments, premium residences, RERA registered">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mahindra Sanctum — Premium 2 & 3 BHK by Mahindra Lifespaces">
+    <meta property="og:description" content="Experience luxury living at Mahindra Sanctum. Download brochure, get exclusive pricing & book a free site visit.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/desk_ban_1.webp">
+    <link rel="icon" type="image/png" href="img/favicon.webp">
+    <title>Mahindra Sanctum — Premium 2 & 3 BHK Residences | Mahindra Lifespaces</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="assets/css/style.css?v=106">
+
+</head>
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+
+            <!-- Logo -->
+            <a href="#" class="logo" aria-label="Mahindra Sanctum Home">
+                <img src="img/logo.webp" alt="Mahindra Sanctum Logo" class="logo-img" width="160" height="44">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active"><i data-lucide="home" class="nav-icon"></i><span>Home</span></a></li>
+                    <li><a href="#pricing" class="nav-link"><i data-lucide="indian-rupee" class="nav-icon"></i><span>Price</span></a></li>
+                    <li><a href="#floorplan" class="nav-link"><i data-lucide="layout-dashboard" class="nav-icon"></i><span>Plans</span></a></li>
+                    <li><a href="#amenities" class="nav-link"><i data-lucide="waves" class="nav-icon"></i><span>Amenities</span></a></li>
+                    <li><a href="#gallery" class="nav-link"><i data-lucide="image" class="nav-icon"></i><span>Gallery</span></a></li>
+                    <li><a href="#location" class="nav-link"><i data-lucide="map-pin" class="nav-icon"></i><span>Location</span></a></li>
+                    <li><a href="#virtual-visit" class="nav-link"><i data-lucide="video" class="nav-icon"></i><span>Virtual Tour</span></a></li>
+                    <li><a href="#brochure" class="nav-link btn-brochure-download" data-source="Nav Brochure"><i data-lucide="download" class="nav-icon bounce-icon"></i><span>Download Brochure</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Action Panel -->
+            <div class="header-actions">
+                <!-- Dark pill: Download Price Sheet | Phone -->
+                <div class="header-price-phone-group">
+                    <button class="btn-price-sheet" id="btnPriceSheet" aria-label="Download Price List">
+                        <i data-lucide="download" class="btn-icon bounce-icon"></i>
+                        <span>Download<br>Price Sheet</span>
+                    </button>
+                    <div class="header-divider"></div>
+                    <a href="tel:+916292151106" class="header-phone" aria-label="Call us">
+                        <i data-lucide="phone" class="phone-icon"></i>
+                        <span>+91 6292151106</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-out Menu (Moved outside site-header to prevent backdrop-filter containment issues) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-nav-list">
+                <li><a href="#hero" class="mobile-nav-link"><i data-lucide="home" class="nav-icon"></i>Home</a></li>
+                <li><a href="#pricing" class="mobile-nav-link"><i data-lucide="indian-rupee" class="nav-icon"></i>Price</a></li>
+                <li><a href="#floorplan" class="mobile-nav-link"><i data-lucide="layout-dashboard" class="nav-icon"></i>Plans</a></li>
+                <li><a href="#amenities" class="mobile-nav-link"><i data-lucide="waves" class="nav-icon"></i>Amenities</a></li>
+                <li><a href="#gallery" class="mobile-nav-link"><i data-lucide="image" class="nav-icon"></i>Gallery</a></li>
+                <li><a href="#location" class="mobile-nav-link"><i data-lucide="map-pin" class="nav-icon"></i>Location</a></li>
+                <li><a href="#virtual-visit" class="mobile-nav-link"><i data-lucide="video" class="nav-icon"></i>Virtual Tour</a></li>
+                <li><a href="#brochure" class="mobile-nav-link btn-brochure-download" data-source="Mobile Nav Brochure"><i data-lucide="download" class="nav-icon"></i>Download Brochure</a></li>
+            </ul>
+            <div class="mobile-actions">
+                <button class="btn-price-sheet" aria-label="Download Price List">
+                    <i data-lucide="download" class="btn-icon"></i>
+                    <span>Download Price List</span>
+                </button>
+                <a href="tel:+916292151106" class="mobile-phone">
+                    <i data-lucide="phone"></i>
+                    <span>+91 6292 151 106</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+      <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero-section" id="hero">
+
+        <!-- Full-page wrapper: main content on left + sticky sidebar on right -->
+        <div class="hero-page-wrapper">
+
+            <!-- LEFT: All scrollable content -->
+            <div class="hero-main-content">
+
+                <!-- Hero top row: info card + banner -->
+                <div class="hero-container">
+
+                    <!-- Left: Structured Hero Info Card -->
+                    <div class="hero-info-card">
+                        <div class="hic-header">
+                            Bookings Open – Choice Units &amp; Launch Pricing Filling Fast
+                        </div>
+                        <div class="hic-body">
+                            <h2 class="hic-title">Mahindra Lifespaces<br>Codename: Sanctum</h2>
+                            <p class="hic-developer">Premium 2 &amp; 3 BHK Homes By Mahindra Lifespaces</p>
+                            
+                            <div class="hic-details-table">
+                                <div class="hic-table-row">
+                                    <span class="hic-table-label">Configuration</span>
+                                    <span class="hic-table-value">2 &amp; 3 BHK</span>
+                                </div>
+                                <div class="hic-table-row">
+                                    <span class="hic-table-label">Booking Token</span>
+                                    <span class="hic-table-value">₹1,00,000/-</span>
+                                </div>
+                                <div class="hic-table-row">
+                                    <span class="hic-table-label">Booking Status</span>
+                                    <span class="hic-table-value">Bookings Open</span>
+                                </div>
+                            </div>
+                            
+                            <div class="hic-payment-box">
+                                <p>CLP &amp; 20:80 Payment Plans Available</p>
+                                <p>Exclusive NRI &amp; Outstation Offers</p>
+                                <p>Cheque Favouring: Mahindra Lifespace Developers Ltd.</p>
+                            </div>
+                            
+                            <div class="hic-price-section">
+                                <span class="hic-price-label">Premium 2 BHK Starts At</span>
+                                <h3 class="hic-price-value">₹ 1.07 Cr* <span class="hic-price-onwards">Onwards</span></h3>
+                            </div>
+                            
+                            <button class="hic-btn-brochure btn-brochure-download" data-source="Hero Info Card Brochure">
+                                DOWNLOAD BROCHURE
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Center: Banner Slider -->
+                    <div class="hero-banner-slider">
+                        <div class="hero-slider-container">
+                            <div class="hero-slider-img-wrapper">
+                                <picture>
+                                    <!-- Mobile: use mobilebanner_mahindra2.webp on screens ≤900px -->
+                                    <source media="(max-width: 900px)" srcset="img/amenities/mobilebanner_mahindra2.webp">
+                                    <!-- Desktop: use original banner image -->
+                                    <img src="img/amenities/banner1_mahindra.webp" alt="Mahindra Sanctum Balcony Dining" class="hero-slider-img">
+                                </picture>
+                            </div>
+                    </div>
+
+
+                </div><!-- end .hero-container -->
+
+                <!-- Welcome Text Block below Card, Banner & Form -->
+
+            </div><!-- end .hero-main-content -->
+
+
+
+        </div><!-- end .hero-page-wrapper -->
+
+
+        <!-- Welcome Text Block spans full width below -->
+        <div class="hero-welcome-block">
+            <div class="section-container">
+                <h2 class="welcome-title">Welcome To Mahindra Lifespaces – Codename: Sanctum</h2>
+                <p class="welcome-desc">
+                    Mahindra Lifespaces proudly presents Codename: Sanctum — a landmark address offering premium 2 &amp; 3 BHK homes designed for those who seek luxury, comfort, and a trusted developer. With thoughtfully crafted spaces ranging from 738 sq.ft to 1094 sq.ft, Sanctum promises an extraordinary lifestyle backed by Mahindra's legacy of quality and trust. Launch pricing starts at just ₹1.07 Cr for 2 BHK under the CLP payment plan.
+                </p>
+                <div class="welcome-cta">
+                    <button class="btn-welcome-download btn-brochure-download" data-source="Welcome Section Brochure">
+                        <i data-lucide="file-down"></i>
+                        DOWNLOAD BROCHURE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ===================== PRICING SECTION ===================== -->
+    <section class="pricing-section" id="pricing">
+        <div class="section-container">
+            <div class="section-header-row">
+                <h2 class="section-main-title">Mahindra Lifespaces Sanctum – Pricing and Carpet Area</h2>
+            </div>
+            <p class="section-main-subtitle">Attractive launch pricing with CLP &amp; 20:80 Payment Plans | EOI: ₹1,00,000/-</p>
+
+            <!-- Single unified pricing layout -->
+            <div class="pricing-layout">
+
+                <!-- Left: Single combined table -->
+                <div class="pricing-table-col">
+                    <table class="pricing-ref-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Carpet Area</th>
+                                <th>CLP Price</th>
+                                <th>20:80 Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 BHK Premium</td>
+                                <td>738 – 743 Sq.Ft.</td>
+                                <td class="ref-price">₹ 1.07 Cr* Onwards</td>
+                                <td class="ref-price">₹ 1.20 – 1.31 Cr*</td>
+                                <td><button class="btn-price-breakup" data-source="2BHK Premium">Price Breakup</button></td>
+                            </tr>
+                            <tr>
+                                <td>2 BHK Luxury</td>
+                                <td>834 – 838 Sq.Ft.</td>
+                                <td class="ref-price">₹ 1.27 Cr* Onwards</td>
+                                <td class="ref-price">₹ 1.43 – 1.55 Cr*</td>
+                                <td><button class="btn-price-breakup" data-source="2BHK Luxury">Price Breakup</button></td>
+                            </tr>
+                            <tr>
+                                <td>3 BHK</td>
+                                <td>1085 – 1094 Sq.Ft.</td>
+                                <td class="ref-price">₹ 1.57 Cr* Onwards</td>
+                                <td class="ref-price">₹ 1.77 – 1.91 Cr*</td>
+                                <td><button class="btn-price-breakup" data-source="3BHK">Price Breakup</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nri-note">
+                        <i data-lucide="star"></i>
+                        20:80 Price — Exclusive for NRI &amp; Outstation Customers
+                    </div>
+                </div>
+
+                <!-- Right: Image + Download -->
+                <div class="pricing-image-col">
+                    <div class="pricing-img-wrapper" style="overflow: hidden; border-radius: 8px;">
+                        <img src="img/prices.webp" alt="Sanctum Pricing Plan" loading="lazy" style="filter: blur(3.5px); width: 100%; height: auto; transition: filter 0.3s;">
+                    </div>
+                    <button class="btn-download-costing" data-source="Download Costing Details">
+                        <i data-lucide="download"></i>
+                        Download Costing Details
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- EOI Banner -->
+            <div class="eoi-banner">
+                <div class="eoi-content">
+                    <span class="eoi-badge">Limited Period Launch Offer</span>
+                    <p><strong>EOI Amount:</strong> ₹1,00,000/- | <strong>Cheque Favouring:</strong> Mahindra Lifespace Developers Ltd.</p>
+                    <p class="eoi-date">EOI Starts from 05 June 2026 Onwards</p>
+                </div>
+                <button class="btn-table-cta" data-source="EOI Banner" style="padding: 12px 28px; font-size: 0.88rem;">Book EOI Now</button>
+            </div>
+
+            <p class="pricing-note">* Prices are indicative and subject to change without notice. GST, Stamp Duty, Registration &amp; other statutory charges extra.</p>
+        </div>
+    </section>
+
+
+    <!-- ===================== SANCTUM MASTER PLAN ===================== -->
+    <section class="masterplan-section" id="floorplan">
+        <div class="section-container">
+            <div class="section-header-row">
+                <h2 class="section-main-title">Mahindra Lifespaces Sanctum – Master Plan</h2>
+            </div>
+            <p class="section-main-subtitle">A thoughtfully planned township with 80% open green space, clubhouse, and premium amenities</p>
+            <div class="masterplan-wrapper">
+                <img src="img/amenities/master plan.webp" alt="Sanctum Master Plan" loading="lazy" class="masterplan-img">
+                <div class="masterplan-overlay">
+                    <button class="btn-fp-download masterplan-download-btn" data-source="Master Plan Download">
+                        <i data-lucide="download"></i>
+                        Download Master Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SANCTUM FLOOR PLANS ===================== -->
+    <section class="floorplan-section" id="plans">
+        <div class="section-container">
+            <div class="section-header-row">
+                <h2 class="section-main-title">Mahindra Lifespaces Sanctum – Floor Plans</h2>
+            </div>
+            <p class="section-main-subtitle">Intelligently designed 2 &amp; 3 BHK layouts with maximum carpet area efficiency</p>
+
+            <div class="plans-grid">
+                <!-- 2 BHK Premium -->
+                <div class="plan-card">
+                    <div class="plan-badge">2 BHK Premium</div>
+                    <div class="plan-image-wrapper">
+                        <img src="img/floorplan/carpet1_mahindra.webp" alt="Sanctum 2 BHK Premium Floor Plan" loading="lazy">
+                        <div class="plan-overlay">
+                            <button class="btn-fp-download" data-source="Floor Plan - 2BHK Premium">
+                                <i data-lucide="download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="plan-info">
+                        <div class="plan-detail"><i data-lucide="maximize-2"></i> <span>738 – 743 Sq.Ft. Carpet</span></div>
+                        <div class="plan-detail plan-price-highlight"><i data-lucide="indian-rupee"></i> <span>₹1.07 Cr* (CLP)</span></div>
+                    </div>
+                </div>
+
+                <!-- 2 BHK Luxury -->
+                <div class="plan-card">
+                    <div class="plan-badge plan-badge-gold">2 BHK Luxury</div>
+                    <div class="plan-image-wrapper">
+                        <img src="img/floorplan/carpet2_mahindra.webp" alt="Sanctum 2 BHK Luxury Floor Plan" loading="lazy">
+                        <div class="plan-overlay">
+                            <button class="btn-fp-download" data-source="Floor Plan - 2BHK Luxury">
+                                <i data-lucide="download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="plan-info">
+                        <div class="plan-detail"><i data-lucide="maximize-2"></i> <span>834 – 838 Sq.Ft. Carpet</span></div>
+                        <div class="plan-detail plan-price-highlight"><i data-lucide="indian-rupee"></i> <span>₹1.27 Cr* (CLP)</span></div>
+                    </div>
+                </div>
+
+                <!-- 3 BHK -->
+                <div class="plan-card">
+                    <div class="plan-badge plan-badge-dark">3 BHK</div>
+                    <div class="plan-image-wrapper">
+                        <img src="img/amenities/master plan.webp" alt="Sanctum 3 BHK Floor Plan" loading="lazy">
+                        <div class="plan-overlay">
+                            <button class="btn-fp-download" data-source="Floor Plan - 3BHK">
+                                <i data-lucide="download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="plan-info">
+                        <div class="plan-detail"><i data-lucide="maximize-2"></i> <span>1085 – 1094 Sq.Ft. Carpet</span></div>
+                        <div class="plan-detail plan-price-highlight"><i data-lucide="indian-rupee"></i> <span>₹1.57 Cr* (CLP)</span></div>
+                    </div>
+                </div>
+            </div><!-- end .plans-grid -->
+        </div><!-- end .section-container -->
+    </section><!-- end #plans -->
+
+
+    <section class="amenities-section" id="amenities">
+        <div class="section-container">
+            <div class="amenities-header-row">
+                <h2 class="amenities-main-title">Amenities Of Mahindra Lifespaces Sanctum</h2>
+                <button class="btn-amenity-download btn-amenities-download" data-source="Amenities Top Download">DOWNLOAD AMENITIES</button>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <img src="img/amenities/swimmingpool_mahindra.webp" alt="Swimming Pool at Mahindra Sanctum" loading="lazy">
+                    <div class="amenity-overlay">
+                        <i data-lucide="waves"></i>
+                        <h3>Swimming Pool</h3>
+                    </div>
+                </div>
+                <div class="amenity-card">
+                    <img src="img/amenities/gym_mahindra.webp" alt="Modern Gymnasium" loading="lazy">
+                    <div class="amenity-overlay">
+                        <i data-lucide="dumbbell"></i>
+                        <h3>Modern Gymnasium</h3>
+                    </div>
+                </div>
+                <div class="amenity-card">
+                    <img src="img/amenities/yoga_mahindra.webp" alt="Yoga & Meditation Deck" loading="lazy">
+                    <div class="amenity-overlay">
+                        <i data-lucide="heart-pulse"></i>
+                        <h3>Yoga Deck</h3>
+                    </div>
+                </div>
+                <div class="amenity-card">
+                    <img src="img/amenities/cricketnet_mahindra.webp" alt="Cricket Practice Net" loading="lazy">
+                    <div class="amenity-overlay">
+                        <i data-lucide="trophy"></i>
+                        <h3>Cricket Net</h3>
+                    </div>
+                </div>
+                <div class="amenity-card">
+                    <img src="img/amenities/healthloop_mahindra.webp" alt="Health Loop & Jogging Track" loading="lazy">
+                    <div class="amenity-overlay">
+                        <i data-lucide="footprints"></i>
+                        <h3>Health Loop & Jogging Track</h3>
+                    </div>
+                </div>
+                <div class="amenity-card">
+                    <img src="img/amenities/balcony_mahindra.webp" alt="Spacious Balcony Views" loading="lazy">
+                    <div class="amenity-overlay">
+                        <i data-lucide="sun"></i>
+                        <h3>Scenic Balcony</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenities-bottom-row">
+                <button class="btn-amenity-download btn-amenities-download" data-source="Amenities Bottom Download">DOWNLOAD AMENITIES</button>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ===================== GALLERY SECTION ===================== -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-container">
+            <div class="gallery-header-row">
+                <h2 class="gallery-main-title">Gallery Of Mahindra Lifespaces Sanctum</h2>
+                <button class="btn-gallery-download btn-amenities-download" data-source="Gallery Top Download">DOWNLOAD GALLERY</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/amenities/building_mahindra.webp" alt="Mahindra Sanctum Building Elevation" loading="lazy">
+                    <div class="gallery-caption">Building Elevation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/amenities/desktopbanner1.webp" alt="Mahindra Sanctum Lifestyle" loading="lazy">
+                    <div class="gallery-caption">Lifestyle View</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/amenities/desktopbanner2.webp" alt="Mahindra Sanctum Premium Living" loading="lazy">
+                    <div class="gallery-caption">Premium Living</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/desk_ban_2.webp" alt="Mahindra Sanctum Exterior" loading="lazy">
+                    <div class="gallery-caption">Project Exterior</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/amenities/connectivity.webp" alt="Mahindra Sanctum Connectivity" loading="lazy">
+                    <div class="gallery-caption">Connectivity Highlights</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/desk_ban_1.webp" alt="Mahindra Sanctum Club House" loading="lazy">
+                    <div class="gallery-caption">Club House &amp; Entrance</div>
+                </div>
+            </div>
+
+            <div class="gallery-bottom-row">
+                <button class="btn-gallery-download btn-amenities-download" data-source="Gallery Bottom Download">DOWNLOAD GALLERY</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== SCROLL POPUP — REGISTER & AVAIL OFFERS ===================== -->
+    <div class="offer-popup-overlay" id="offerPopup">
+        <div class="offer-popup-card">
+            <button class="offer-popup-close" id="offerPopupClose" aria-label="Close">✕</button>
+
+            <!-- Two-column layout -->
+            <div class="offer-popup-body">
+
+                <!-- LEFT: Logo + We Promise -->
+                <div class="offer-popup-left">
+                    <div class="offer-popup-logo">
+                        <div class="logo-text">
+                            <span class="logo-mahindra">mahindra</span>
+                            <span class="logo-sanctum">SANCTUM</span>
+                        </div>
+                    </div>
+                    <div class="offer-promise-block">
+                        <h3 class="we-promise-title">We Promise</h3>
+                        <div class="we-promise-item">
+                            <i data-lucide="phone-call"></i>
+                            <span>Instant Call Back</span>
+                        </div>
+                        <div class="we-promise-item">
+                            <i data-lucide="car"></i>
+                            <span>Free Site Visit</span>
+                        </div>
+                        <div class="we-promise-item">
+                            <i data-lucide="tag"></i>
+                            <span>Unmatched Price</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Form -->
+                <div class="offer-popup-right">
+                    <h2 class="offer-popup-heading">
+                        Register Here And Avail The <span class="offer-highlight">Best Offers!!</span>
+                    </h2>
+
+                    <form id="offerPopupForm" class="offer-popup-form" novalidate>
+                        <input type="hidden" id="offerLeadSource" name="source" value="Scroll Popup - Offers">
+
+                        <div class="offer-field-group">
+                            <input type="text" id="offerName" name="fullName" placeholder="Name" required>
+                            <span class="field-error" id="offerNameError"></span>
+                        </div>
+
+                        <div class="offer-field-group">
+                            <input type="email" id="offerEmail" name="email" placeholder="Email Address(Optional)">
+                        </div>
+
+                        <div class="offer-field-group offer-phone-row">
+                            <div class="offer-country-code">
+                                <span>India (+91)</span>
+                                <i data-lucide="chevron-down"></i>
+                            </div>
+                            <input type="tel" id="offerPhone" name="phone" placeholder="Phone number" required maxlength="10" inputmode="numeric">
+                            <span class="field-error" id="offerPhoneError"></span>
+                        </div>
+
+                        <button type="submit" class="btn-offer-submit" id="btnOfferSubmit">
+                            GET INSTANT CALL BACK
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="offerSuccess">
+                        <h3>Registered Successfully!</h3>
+                        <p>Our team will call you back within 30 minutes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom phone strip -->
+            <div class="offer-popup-phone-strip">
+                <i data-lucide="phone"></i>
+                <span>+91 6292 151 106</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== DOWNLOAD BROCHURE ===================== -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== LOCATION SECTION ===================== -->
+    <section class="location-section" id="location">
+        <div class="section-container">
+            <div class="location-header-row">
+                <h2 class="location-main-title">Mahindra Lifespaces Sanctum Location Map And Connectivity</h2>
+                <button class="btn-get-directions btn-location-cta btn-brochure-download" data-source="Location Top - Get Directions">GET DIRECTIONS</button>
+            </div>
+
+            <div class="location-content">
+                <div class="location-map">
+                    <img src="img/amenities/connectivity.webp" alt="Mahindra Sanctum Location Map" loading="lazy" class="location-map-img">
+                </div>
+                <div class="location-details">
+                    <div class="distance-list">
+                        <div class="distance-item">
+                            <div class="distance-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="distance-info">
+                                <span class="distance-place">Old Mumbai-Pune Highway</span>
+                                <span class="distance-time">1 Min*</span>
+                            </div>
+                        </div>
+                        <div class="distance-item">
+                            <div class="distance-icon"><i data-lucide="train-front"></i></div>
+                            <div class="distance-info">
+                                <span class="distance-place">Sant Tukaram Metro Station</span>
+                                <span class="distance-time">5 Mins*</span>
+                            </div>
+                        </div>
+                        <div class="distance-item">
+                            <div class="distance-icon"><i data-lucide="building"></i></div>
+                            <div class="distance-info">
+                                <span class="distance-place">PCMC Office</span>
+                                <span class="distance-time">4 Mins*</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-bottom-row">
+                <button class="btn-get-directions btn-location-cta btn-brochure-download" data-source="Location Bottom - Get Directions">GET DIRECTIONS</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== VIRTUAL TOUR SECTION ===================== -->
+    <section class="virtual-tour-section" id="virtual-visit">
+        <div class="section-container">
+            <div class="section-header-row">
+                <h2 class="section-main-title">Virtual Tour Request</h2>
+            </div>
+            <div class="vt-banner-wrapper" id="vtBannerWrapper">
+                <img src="img/amenities/balcony_mahindra.webp" alt="Mahindra Sanctum Virtual Tour" class="vt-banner-img" loading="lazy">
+                <div class="vt-overlay">
+                    <button class="vt-play-btn" id="vtPlayBtn" aria-label="Play Virtual Tour">
+                        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="38" stroke="white" stroke-width="3" fill="rgba(0,0,0,0.35)"/>
+                            <polygon points="32,22 62,40 32,58" fill="white"/>
+                        </svg>
+                    </button>
+                    <h3 class="vt-title">VIRTUAL SITE VISIT</h3>
+                    <p class="vt-subtitle">Mahindra Lifespaces Sanctum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== ABOUT DEVELOPER & RERA SECTION ===================== -->
+    <section class="dev-about-section" id="developer-info" style="padding: 60px 0; background: #ffffff; border-top: 1px solid #e2e8f0; font-family: 'Inter', sans-serif;">
+        <div class="section-container" style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+            
+            <!-- Logo Header -->
+            <div class="dev-logo-row" style="display: flex; justify-content: center; margin-bottom: 24px;">
+                <img src="img/logo.webp" alt="Mahindra Sanctum Logo" style="max-height: 48px; width: auto;">
+            </div>
+            
+            <!-- Header with Title and Button -->
+            <div class="dev-header-row" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+                <h3 style="font-family: 'Inter', sans-serif; font-size: 1.5rem; color: #1a202c; margin: 0; font-weight: 700;">About Mahindra Lifespaces</h3>
+                <a href="https://wa.me/916292151106?text=Hi%2C%20I%20am%20interested%20in%20Mahindra%20Sanctum.%20Please%20send%20details." target="_blank" class="chat-btn" style="background: #187077; color: #ffffff; border-radius: 4px; padding: 10px 24px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; transition: background 0.3s; font-family: 'Inter', sans-serif;">
+                    Chat with us
+                </a>
+            </div>
+            
+            <!-- Developer Description -->
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #4a5568; margin: 0 0 28px 0; text-align: left;">
+                Established in 1994, Mahindra Lifespace Developers Ltd. is the real estate and infrastructure development arm of the Mahindra Group, one of India's most respected conglomerates. Over the past 25+ years, the company has built a strong reputation by delivering high-quality residential developments, premium office spaces, and integrated cities. With its residential footprint spanning multiple major cities in India, Mahindra Lifespaces has received numerous awards for its focus on sustainable design and premium lifestyle integration.
+            </p>
+            
+            <!-- RERA Subheading -->
+            <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 700; color: #1a202c; margin: 0 0 12px 0;">RERA Information</h4>
+            
+            <!-- RERA QR and Details -->
+            <div class="rera-qr-box" style="margin-bottom: 24px;">
+                <img src="img/qrcode.webp" alt="Mahindra Sanctum MahaRERA QR" style="width: 80px; height: 80px; border: 1px solid #e2e8f0; border-radius: 4px; display: block; margin-bottom: 12px;">
+                <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #4a5568; margin: 0; line-height: 1.5;">
+                    Mahindra Sanctum MahaRERA -<br>
+                    <strong style="font-weight: 800; font-size: 1.05rem; color: #1a202c;">PM1264042600425</strong>
+                </p>
+            </div>
+            
+            <!-- RERA Disclaimer Text -->
+            <p style="font-family: 'Inter', sans-serif; font-size: 0.92rem; line-height: 1.6; color: #4a5568; margin: 0; text-align: left;">
+                According to the RERA Act 2016 of the Government of India, all projects of Mahindra Lifespace Developers Limited, including Mahindra Sanctum, are listed on the Maharashtra Government's RERA website under registered projects.
+            </p>
+            
+        </div>
+    </section>
+
+
+    <!-- ===================== RERA & REGISTRATION DETAILS ===================== -->
+    <section class="rera-details-section" id="rera-details">
+        <div class="section-container">
+            <div class="section-header-row">
+                <h2 class="section-main-title">Project RERA &amp; Registration Details</h2>
+            </div>
+
+            <ul class="rera-details-list">
+                <li><i data-lucide="check"></i> Project Registered under Government of India RERA Act 2016</li>
+                <li><i data-lucide="check"></i> MAHA RERA Project Registration No.: PM1264042600425</li>
+                <li><i data-lucide="check"></i> Developer: Mahindra Lifespace Developers Ltd.</li>
+                <li><i data-lucide="check"></i> Authorised Marketing Partner Name: Caifu Wealth Creators Private Limited</li>
+                <li><i data-lucide="check"></i> Codename: Sanctum | Premium 2 &amp; 3 BHK Homes</li>
+                <li><i data-lucide="check"></i> Bookings Open – Choice Units &amp; Launch Pricing Filling Fast | Booking Token: ₹1,00,000/-</li>
+                <li><i data-lucide="check"></i> Site Address: Mahindra Citadel, Mahindra Lifespace Developers Limited CTS No. 4854, Sub-Plot A, Old Mumbai-Pune Highway Pimpri-Chinchwad, Pune – 411018</li>
+                <li><i data-lucide="check"></i> Rera number: A51700045963</li>
+                <li><i data-lucide="check"></i> Authorised Marketing Partner: CIN:- P51700046572</li>
+            </ul>
+
+            <div class="rera-disclaimer-box">
+                <p><strong>Disclaimer:</strong> We are an authorised marketing partner for this project. Provided content is given by respective owners and this website and content is for information purpose only and it does not constitute any offer to avail for any services. Prices mentioned are subject to change without prior notice and properties mentioned are subject to availability. You can expect a call, SMS or emails on details registered with us.</p>
+            </div>
+
+            <!-- Simple Copyright Footer Line -->
+            <div class="simple-footer-line" style="text-align: center; padding-top: 30px; margin-top: 30px; border-top: 1px solid #e2e8f0; font-size: 0.88rem; color: var(--text-secondary);">
+                Copyright &copy; 2026 | <a href="terms.html" style="color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.2s;">Terms &amp; Conditions</a> | <a href="privacy.html" style="color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.2s;">Privacy Policy</a> | <a href="cookies.html" style="color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.2s;">Cookies Policy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== MOBILE STICKY FOOTER ===================== -->
+    <div class="mobile-sticky-footer" id="mobileStickyFooter">
+        <a href="tel:+916292151106" class="sticky-btn sticky-call">
+            <i data-lucide="phone" class="sticky-icon"></i>
+            <span>Call Now</span>
+        </a>
+        <button class="sticky-btn sticky-enquire" onclick="if (typeof window.openOfferPopup === 'function') window.openOfferPopup();" aria-label="Enquire Now">
+            <i data-lucide="mail" class="sticky-icon"></i>
+            <span>Enquire Now</span>
+        </button>
+    </div>
+
+
+    <!-- ===================== FIXED QUOTE SIDEBAR ===================== -->
+    <div class="fixed-quote-sidebar" id="fixedQuoteSidebar">
+        <div class="form-card" id="leadFormCard">
+            <!-- Instant Callback button above form title -->
+            <button class="btn-callback pulse-btn sidebar-callback-btn" id="btnCallback" aria-label="Request Instant Callback">
+                <span class="pulse-ring"></span>
+                <i data-lucide="phone-call" class="btn-icon"></i>
+                <span>Instant Callback</span>
+            </button>
+
+            <div class="form-header">
+                <h2 class="form-title">Get The Best Quote</h2>
+            </div>
+
+            <form id="leadForm" class="lead-form" novalidate>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <input type="text" id="fullName" name="fullName" placeholder="Name" required autocomplete="name">
+                    <span class="field-error" id="nameError"></span>
+                </div>
+
+                <!-- Email (Optional) -->
+                <div class="form-group">
+                    <input type="email" id="emailAddress" name="email" placeholder="Email Address(Optional)" autocomplete="email">
+                    <span class="field-error" id="emailError"></span>
+                </div>
+
+                <!-- Phone Number with Country Code -->
+                <div class="form-group phone-row">
+                    <div class="country-code-text">
+                        <span>India (+91)</span>
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <input type="tel" id="phoneNumber" name="phone" placeholder="Phone number" required autocomplete="tel-national" maxlength="10" inputmode="numeric" pattern="[6-9][0-9]{9}">
+                    <span class="field-error" id="phoneError"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit" id="btnSubmit">
+                    GET IT NOW
+                </button>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess">
+                <div class="success-icon-wrapper">
+                    <svg class="success-check" viewBox="0 0 52 52"><circle cx="26" cy="26" r="25" fill="none" stroke="#22c55e" stroke-width="2"/><path fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 16-16"/></svg>
+                </div>
+                <h3>Thank You!</h3>
+                <p>Our team will contact you within 30 minutes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Left Download Brochure Button -->
+    <button class="floating-brochure-btn btn-brochure-download" data-source="Floating Brochure Button" aria-label="Download Brochure">
+        <div class="fb-text">
+            <span>Download</span>
+            <span>Brochure</span>
+        </div>
+        <div class="fb-pdf-icon">
+            <i data-lucide="file-text"></i>
+            <span class="pdf-tag">PDF</span>
+        </div>
+    </button>
+
+    <script src="assets/js/main.js?v=100"></script>
+    <script src="assets/js/chatbot.js?v=100"></script>
+
+</body>
+</html>
