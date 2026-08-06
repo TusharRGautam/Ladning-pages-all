@@ -818,6 +818,9 @@ i[data-lucide="download"],
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
     margin-top: 6px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
 }
 
 .fixed-quote-sidebar .btn-submit:hover {
@@ -3313,6 +3316,7 @@ i[data-lucide="download"],
     right: 30px;
     z-index: 99999 !important;
     font-family: var(--font-body);
+    pointer-events: none !important;
 }
 
 /* Chatbot Bubble */
@@ -4205,6 +4209,7 @@ i[data-lucide="download"],
     transition: background 0.2s;
     cursor: pointer;
     margin-top: 6px;
+    pointer-events: auto !important;
 }
 
 .btn-offer-submit:hover { background: #7a2e2e; }
@@ -4382,6 +4387,14 @@ i[data-lucide="download"],
     align-items: flex-end;
     gap: 10px;
     font-family: var(--font-body);
+    pointer-events: none !important;
+}
+
+.chatbot-bubble,
+.chatbot-window,
+.chatbot-greeting-bubble,
+.floating-brochure-btn {
+    pointer-events: auto !important;
 }
 
 /* Greeting Bubble */
