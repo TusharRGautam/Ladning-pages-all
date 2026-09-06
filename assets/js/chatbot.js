@@ -1,6 +1,6 @@
 /**
- * Automated Real Estate Chatbot — Mahindra Sanctum
- * Agent: Priya Shetty | Auto-opens 3 seconds after page load
+ * Automated Real Estate Chatbot — Prestige Thane
+ * Agent: Shreya | Auto-opens after page interaction
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -109,6 +109,8 @@ function initChatbot() {
     let lastUserSelection = '';
     let greetingShown = false;
 
+    let greetingTimer = null;
+
     /* ============================================================
        4. AUTO-OPEN CHAT WINDOW AFTER 3 SECONDS
        ============================================================ */
@@ -119,23 +121,51 @@ function initChatbot() {
     }, 3000);
 
     function showGreeting() {
+        if (windowEl.classList.contains('open')) return;
         greetingShown = true;
         greeting.classList.add('visible');
         notification.style.display = 'none';
+
+        // Auto-dismiss greeting after 5 seconds
+        if (greetingTimer) clearTimeout(greetingTimer);
+        greetingTimer = setTimeout(() => {
+            hideGreeting();
+        }, 5000);
+    }
+
+    function hideGreeting() {
+        if (greeting) {
+            greeting.classList.remove('visible');
+        }
+        if (greetingTimer) {
+            clearTimeout(greetingTimer);
+            greetingTimer = null;
+        }
     }
 
 
     /* ============================================================
        5. GREETING POPUP CONTROLS
        ============================================================ */
-    greetingOpen.addEventListener('click', () => {
-        greeting.classList.remove('visible');
+    greetingOpen.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideGreeting();
         openChatWindow();
     });
 
-    greetingDismiss.addEventListener('click', () => {
-        greeting.classList.remove('visible');
+    greetingDismiss.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideGreeting();
     });
+
+    // Dismiss greeting immediately if user hovers, scrolls or interacts with the sidebar
+    const fixedSidebar = document.getElementById('fixedQuoteSidebar');
+    if (fixedSidebar) {
+        fixedSidebar.addEventListener('mouseenter', hideGreeting);
+        fixedSidebar.addEventListener('click', hideGreeting);
+        fixedSidebar.addEventListener('focusin', hideGreeting);
+        fixedSidebar.addEventListener('scroll', hideGreeting);
+    }
 
     // Dynamic numeric restriction on phone field & placeholder toggle on country code select
     chatInput.addEventListener('input', (e) => {
@@ -162,11 +192,12 @@ function initChatbot() {
     /* ============================================================
        6. BUBBLE CLICK — TOGGLE WINDOW
        ============================================================ */
-    bubble.addEventListener('click', () => {
+    bubble.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideGreeting();
         if (windowEl.classList.contains('open')) {
             closeChatWindow();
         } else {
-            greeting.classList.remove('visible');
             openChatWindow();
         }
     });
@@ -269,16 +300,13 @@ function initChatbot() {
                 case 'pricing':
                     lastUserSelection = 'Pricing Info';
                     addMessage(
-                        "Here's the launch pricing for Mahindra Sanctum:\n\n" +
-                        "📋 <b>CLP (Construction Linked Plan)</b>\n" +
-                        "• 2 BHK Premium (738–743 sq.ft) — <b>₹1.07 Cr*</b>\n" +
-                        "• 2 BHK Luxury (834–838 sq.ft) — <b>₹1.27 Cr*</b>\n" +
-                        "• 3 BHK (1085–1094 sq.ft) — <b>₹1.57 Cr*</b>\n\n" +
-                        "💰 <b>20:80 Payment Plan</b>\n" +
-                        "• 2 BHK Premium — <b>₹1.20–1.31 Cr*</b>\n" +
-                        "• 2 BHK Luxury — <b>₹1.43–1.55 Cr*</b>\n" +
-                        "• 3 BHK — <b>₹1.77–1.91 Cr*</b>\n\n" +
-                        "EOI Amount: ₹1,00,000/- | Starts 05 June 2026\n\nWant the detailed Cost Sheet?",
+                        "Here is the tentative launch pricing for Prestige Thane (Near Kapurbawadi Junction):\n\n" +
+                        "🏡 <b>Indicative Configurations</b>\n" +
+                        "• <b>2 Bed 2T + Balcony</b> (~700 sq.ft) — <b>₹1.49 Cr++</b>\n" +
+                        "• <b>3 Bed 3T + Balcony</b> (~1,050 sq.ft) — <b>₹2.30 Cr++</b>\n" +
+                        "• <b>4 Bed 4T + Powder Room + 2 Balcony</b> (~1,500 sq.ft) — <b>₹3.60 Cr++</b>\n\n" +
+                        "⚡ <b>EOI Priority Pass Registration Opening Soon!</b>\n" +
+                        "50+ Storey Development with 60% Open Landscaped Spaces.\n\nWant the detailed Cost Sheet?",
                         'bot'
                     );
                     showQuickOptions([

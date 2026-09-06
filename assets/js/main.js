@@ -320,7 +320,7 @@ const style = document.createElement('style');
 style.textContent = `
     @keyframes formFlash {
         0%, 100% { box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
-        50% { box-shadow: 0 20px 60px rgba(212,168,83,0.4), 0 0 0 3px rgba(212,168,83,0.3); }
+        50% { box-shadow: 0 20px 60px rgba(171,138,65,0.4), 0 0 0 3px rgba(171,138,65,0.3); }
     }
 `;
 document.head.appendChild(style);

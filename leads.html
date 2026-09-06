@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leads Dashboard — Mahindra Sanctum</title>
+    <title>Leads Dashboard — Prestige Thane</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
@@ -11,9 +11,9 @@
 
     <style>
         :root {
-            --primary: #1a365d;
-            --primary-light: #2b6cb0;
-            --accent: #d4a853;
+            --primary: #ab8a41;
+            --primary-light: #c19f55;
+            --accent: #ab8a41;
             --text-primary: #1a202c;
             --bg-light: #f7fafc;
             --border-light: #e2e8f0;
@@ -250,7 +250,7 @@
     <div class="container" id="dashboardContainer" style="display: none;">
         <div class="dashboard-header">
             <div>
-                <h1>Mahindra Sanctum Leads</h1>
+                <h1>Prestige Thane Leads</h1>
                 <p style="font-size: 0.8rem; color: #718096; margin-top: 4px;">Download and manage captured real estate leads</p>
             </div>
             <div class="action-buttons">
@@ -412,7 +412,7 @@
                 const encodedUri = encodeURI(csvContent);
                 const link = document.createElement("a");
                 link.setAttribute("href", encodedUri);
-                link.setAttribute("download", `mahindra_sanctum_leads_${new Date().toISOString().slice(0,10)}.csv`);
+                link.setAttribute("download", `prestige_thane_leads_${new Date().toISOString().slice(0,10)}.csv`);
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
