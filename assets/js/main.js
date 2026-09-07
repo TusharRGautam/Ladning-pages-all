@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPricingTabs();
     initDownloadButtons();
     initVirtualTourPopup();
+    initHeroBannerSlider();
 });
 
 /* ============================================================
@@ -577,4 +578,102 @@ function initVirtualTourPopup() {
 
     if (playBtn) playBtn.addEventListener('click', (e) => { e.stopPropagation(); openVT(); });
     if (bannerWrapper) bannerWrapper.addEventListener('click', openVT);
+}
+
+/* ============================================================
+   HERO BANNER SLIDER (B1, B2, B3)
+   ============================================================ */
+function initHeroBannerSlider() {
+    const slider = document.getElementById('heroSlider');
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('#heroSlideDots .hero-dot');
+    const prevBtn = document.getElementById('heroSlidePrev');
+    const nextBtn = document.getElementById('heroSlideNext');
+
+    if (!slides.length) return;
+
+    let current = 0;
+    let timer = null;
+    const interval = 4500; // 4.5 seconds auto-play
+
+    function goToSlide(index) {
+        slides[current].classList.remove('active');
+        if (dots[current]) dots[current].classList.remove('active');
+
+        current = (index + slides.length) % slides.length;
+
+        slides[current].classList.add('active');
+        if (dots[current]) dots[current].classList.add('active');
+    }
+
+    function nextSlide() {
+        goToSlide(current + 1);
+    }
+
+    function prevSlide() {
+        goToSlide(current - 1);
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        timer = setInterval(nextSlide, interval);
+    }
+
+    function stopAutoplay() {
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            startAutoplay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            startAutoplay();
+        });
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            goToSlide(idx);
+            startAutoplay();
+        });
+    });
+
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+
+    // Touch swipe support for mobile devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoplay();
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 40) {
+            if (diff < 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+        startAutoplay();
+    }, { passive: true });
+
+    startAutoplay();
 }
